@@ -9,8 +9,8 @@ import {IERC20} from "./interfaces/IERC20.sol";
 import {ISwapRouter} from "./interfaces/ISwapRouter.sol";
 
 contract Fees {
-    address public immutable WETH;
-    address public immutable staking;
+    address public immutable WETH;  // @audit WETH address
+    address public immutable staking; // @audit staking address
 
     /// uniswap v3 router
     ISwapRouter public constant swapRouter =
