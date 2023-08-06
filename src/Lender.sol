@@ -6,7 +6,6 @@ import "./utils/Structs.sol";
 
 import {IERC20} from "./interfaces/IERC20.sol";
 import {Ownable} from "./utils/Ownable.sol";
-import "forge-std/console.sol";
 
 contract Lender is Ownable {
     event PoolCreated(bytes32 indexed poolId, Pool pool);

@@ -120,7 +120,6 @@ contract BuyLoanRedeemCollateral is Test {
         bytes32 poolIdOne = lender.setPool(p1);
 
         vm.startPrank(lender2);
-        //bytes32 poolIdTwo = lender.getPoolId(address(lender), address(loanToken), address(collateralToken));
 
         bytes32 poolIdTwo = lender.setPool(p2);
 
@@ -232,11 +231,11 @@ contract BuyLoanRedeemCollateral is Test {
         bool tokenBalances
     ) public {
         if (tokenBalances) {
-            collateralBalances();
-            //loanTokenBalances();
+            //collateralBalances();
+            // loanTokenBalances();
         }
         if (loansData) {
-            //  loanLogs(poolIdOne, poolIdTwo, poolIdThree, loandLender, loanBorrower);
+            loanLogs(poolIdOne, poolIdTwo, poolIdThree, loandLender, loanBorrower);
         }
     }
 
@@ -255,8 +254,8 @@ contract BuyLoanRedeemCollateral is Test {
         (,,,, poolBalance,,,, outstandingLoans) = lender.pools(poolIdThree);
         console.log("Pool3, Loans", outstandingLoans, "Balance", poolBalance);
         console.log("*********************************");
-        // console.log("Lender", loandLender);
-        // console.log("Borrower", loanBorrower);
+        console.log("Lender", loandLender);
+        console.log("Borrower", loanBorrower);
         console.log("*********************************");
     }
 }
